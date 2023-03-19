@@ -1,4 +1,7 @@
-package org.example;
+package org.example.v3;
+
+import org.example.EmailEnhancer;
+import org.example.InvoiceEmailer;
 
 public class InvoiceEmailerFactory {
 	private final EmailEnhancer enhancer;
@@ -11,7 +14,7 @@ public class InvoiceEmailerFactory {
 		enhancer = builder.enhancer;
 	}
 
-	InvoiceEmailer createInvoiceEmailer() {
+	public InvoiceEmailer createInvoiceEmailer() {
 		return new InvoiceEmailerImpl(this.enhancer);
 	}
 

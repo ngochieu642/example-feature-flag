@@ -1,4 +1,8 @@
-package org.example;
+package org.example.v3;
+
+import org.example.Email;
+import org.example.EmailEnhancer;
+import org.example.InvoiceEmailer;
 
 public class InvoiceEmailerImpl implements InvoiceEmailer {
 

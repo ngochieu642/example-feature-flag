@@ -1,4 +1,7 @@
-package org.example;
+package org.example.common;
+
+import org.example.FeatureDecisions;
+import org.example.ToggleRouter;
 
 /**
  * This class contain business logic

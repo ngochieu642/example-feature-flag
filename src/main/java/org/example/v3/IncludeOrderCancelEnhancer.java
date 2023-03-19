@@ -1,4 +1,7 @@
-package org.example;
+package org.example.v3;
+
+import org.example.Email;
+import org.example.EmailEnhancer;
 
 public class IncludeOrderCancelEnhancer implements EmailEnhancer {
 	@Override

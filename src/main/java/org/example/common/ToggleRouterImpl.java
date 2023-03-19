@@ -1,4 +1,6 @@
-package org.example;
+package org.example.common;
+
+import org.example.ToggleRouter;
 
 import java.util.HashMap;
 import java.util.Map;
