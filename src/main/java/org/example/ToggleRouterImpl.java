@@ -21,6 +21,12 @@ public class ToggleRouterImpl implements ToggleRouter {
 
 	@Override
 	public boolean isEnabled(String featureName) {
-		return this.featureConfig.get(featureName);
+		var isFeatureEnabled = this.featureConfig.get(featureName);
+
+		if (isFeatureEnabled == null) {
+			return false;
+		}
+
+		return isFeatureEnabled;
 	}
 }
