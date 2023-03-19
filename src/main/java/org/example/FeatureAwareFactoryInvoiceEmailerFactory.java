@@ -1,6 +1,6 @@
 package org.example;
 
-public class FeatureAwareFactory_InvoiceEmailerFactory {
+public class FeatureAwareFactoryInvoiceEmailerFactory {
 	FeatureDecisions featureDecisions;
 
 	static InvoiceEmailerFactory createFeatureAwareFactoryBasedOn(FeatureDecisions featureDecisions) {

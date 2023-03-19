@@ -10,7 +10,7 @@ class MainTest {
 	@DisplayName("Test that email does include cancellation option when configured to do so")
 	void testIncludeOrderCancellation() {
 		FeatureDecisions featureDecisions = FeatureDecisionsFactory.fromInput(true);
-		InvoiceEmailerFactory invoiceEmailerFactory = FeatureAwareFactory_InvoiceEmailerFactory.createFeatureAwareFactoryBasedOn(featureDecisions);
+		InvoiceEmailerFactory invoiceEmailerFactory = FeatureAwareFactoryInvoiceEmailerFactory.createFeatureAwareFactoryBasedOn(featureDecisions);
 		InvoiceEmailer invoiceEmailer = invoiceEmailerFactory.createInvoiceEmailer();
 		Email email = invoiceEmailer.generateInvoiceEmail("test", "Hi", 10);
 
@@ -21,7 +21,7 @@ class MainTest {
 	@DisplayName("Test that email does not include cancellation option when configured not to do so")
 	void testNotIncludeOrderCancellation() {
 		FeatureDecisions featureDecisions = FeatureDecisionsFactory.fromInput(false);
-		InvoiceEmailerFactory invoiceEmailerFactory = FeatureAwareFactory_InvoiceEmailerFactory.createFeatureAwareFactoryBasedOn(featureDecisions);
+		InvoiceEmailerFactory invoiceEmailerFactory = FeatureAwareFactoryInvoiceEmailerFactory.createFeatureAwareFactoryBasedOn(featureDecisions);
 		InvoiceEmailer invoiceEmailer = invoiceEmailerFactory.createInvoiceEmailer();
 		Email email = invoiceEmailer.generateInvoiceEmail("test", "Hi", 10);
 
